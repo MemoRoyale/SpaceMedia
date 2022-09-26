@@ -76,8 +76,8 @@ const Upload  = () => {
     }
   }
   return (
-    <div className='flex w-full h-full absolute left-0 top-[60px] lg:top-[70px] mb-10 pt-10 lg:pt-20 bg-[#F8F8F8] justify-center'>
-      <div className='bg-white rounded-lg xl:h-[80vh] w-[60%] flex gap-6 flex-wrap justify-between items-center p-14 pt-6'>
+    <div className='flex w-full h-full absolute left-0 top-[60px] mb-10 pt-10 lg:pt-20 bg-[#F8F8F8] justify-center'>
+      <div className='bg-white rounded-lg xl:h-[80vh] flex gap-6 flex-wrap justify-center items-center p-14 pt-6'>
         <div>
           <div>
             <p className='text-2xl font-bold'>Upload Video</p>
@@ -115,7 +115,7 @@ const Upload  = () => {
                         </p>
                       </div>
                       <p className='text-gray-400 text-center mt-10 text-sm leading-10'>
-                        MP4 or WebM or ogg <br/>
+                        MP4 or WebM or ogg or MOV <br/>
                         720x1280 or higher <br/>
                         Up to 10 minuites <br/>
                         Less than 2GB
@@ -138,8 +138,8 @@ const Upload  = () => {
               </div>
             )}
             {wrongFileType && (
-              <p className='text-center text-xs text-red-400 font-semibold mt-4 w-[260px]'>
-                Please select an video file (mp4 or webm or ogg)
+              <p className='text-center text-xs text-red-400 font-semibold mt-4 w-[25 0px]'>
+                Please select an video file (mp4 or webm or ogg or MOV)
               </p>
             )}
           </div>
