@@ -1,7 +1,7 @@
 import axios from 'axios';
 import jwt_decode from 'jwt-decode'
 
-export const BASE_URL = "http://localhost:3000";
+export const BASE_URL = "https://space-media-qbnz.vercel.app";
 
 export const createOrGetUser = async (response: any,addUser:any) => {
    const decoded: { name : string,picture:string,sub:string} =
@@ -19,7 +19,7 @@ export const createOrGetUser = async (response: any,addUser:any) => {
 
    addUser(user);
 
-   await axios.post('http://localhost:3000/api/auth', user);
+   await axios.post('https://space-media-qbnz.vercel.app/api/auth', user);
 
   
  
