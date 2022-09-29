@@ -100,15 +100,14 @@ const Upload  = () => {
             {Loading ? (
               <p className='text-center text-3xl text-purple-400 font-semibold' >Uploading...</p>
             ):(
-              <div >
+              <div>
                 {videoAsset ? (
                   <div className='rounded-3xl w-[500px] h-[700px]  p-4 flex flex-col gap-6 justify-center items-center'>
                     <video
                       src={videoAsset.url}
                       loop
                       controls
-                      className='rounded-xl h-[462px] mt-16 bg-black'
-
+                      className='rounded-xl h-[462px] mt-16 bg-black justify-center items-center'
                     >
 
                     </video>
