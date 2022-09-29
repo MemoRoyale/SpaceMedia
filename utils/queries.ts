@@ -8,6 +8,7 @@ export const allPostsQuery = () => {
           url
         }
       },
+      launchAt,
       userId,
       postedBy->{
         _id,
@@ -39,6 +40,7 @@ export const postDetailQuery = (postId: string | string[]) => {
           url
         }
       },
+      launchAt,
       userId,
     postedBy->{
       _id,
@@ -68,6 +70,7 @@ export const searchPostsQuery = (searchTerm: string | string[]) => {
           url
         }
       },
+      launchAt,
       userId,
     postedBy->{
       _id,
@@ -110,6 +113,7 @@ export const userCreatedPostsQuery = (userId: string | string[]) => {
           url
         }
       },
+      launchAt,
       userId,
     postedBy->{
       _id,
@@ -142,6 +146,7 @@ export const userLikedPostsQuery = (userId: string | string[]) => {
           url
         }
       },
+      launchAt,
       userId,
     postedBy->{
       _id,
@@ -174,6 +179,7 @@ export const topicPostsQuery = (topic: string | string[]) => {
           url
         }
       },
+      launchAt,
       userId,
     postedBy->{
       _id,
