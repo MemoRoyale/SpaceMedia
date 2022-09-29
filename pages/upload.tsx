@@ -86,7 +86,7 @@ const Upload  = () => {
           <div className='border-dashed rounded-xl border-4 border-gray-200 flex flex-col
           justify-center items-center outline-none mt-10 w-[260px] h-[460px] p-10 cursor-pointer hover:border-purple-300 hover:bg-gray-100'>
             {isLoading ? (
-              <p >Uploading...</p>
+              <p className='text-center text-3xl text-purple-400 font-semibold' >Uploading...</p>
             ):(
               <div>
                 {videoAsset ? (

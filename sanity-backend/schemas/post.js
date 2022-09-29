@@ -17,6 +17,17 @@ export default {
       },
     },
     {
+      title: 'Launch Scheduled At',
+      name: 'launchAt',
+      type: 'datetime',
+      options: {
+        dateFormat: 'YYYY-MM-DD',
+        timeFormat: 'HH:mm',
+        timeStep: 15,
+        calendarTodayLabel: 'Today'
+      }
+    },
+    {
       name: 'userId',
       title: 'UserId',
       type: 'string',

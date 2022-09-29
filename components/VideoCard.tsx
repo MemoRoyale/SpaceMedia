@@ -60,24 +60,24 @@ const VideoCard: NextPage<IProps> = ({post}) => {
             </Link>
           </div>
           <div>
-          <Link href={`/profile/${post.postedBy._id}`}>
-            <div className='flex items-center gap-2'>
-              <p className='flex gap-2 items-center md:text-md font-bold text primary'>
-                {post.postedBy.userName}{`
-              `}
-              <GoVerified className='text-blue-400  text-md'/>
-              
-              </p>
-              <p className='capitalize font-medium text-xs text-gray-500 hidden md:block'>
-                {post.postedBy.userName}
-              </p>
-              
-            </div>
-          </Link>
-          <Link href={''}>
-            <p className='mt-2 font-normal '>{post.caption}</p>
-          </Link>
-        </div>
+            <Link href={`/profile/${post.postedBy._id}`}>
+              <div className='flex items-center gap-2'>
+                <p className='flex gap-2 items-center md:text-md font-bold text primary'>
+                  {post.postedBy.userName}{`
+                `}
+                <GoVerified className='text-blue-400  text-md'/>
+                
+                </p>
+                <p className='capitalize font-medium text-xs text-gray-500 hidden md:block'>
+                  {post.postedBy.userName}
+                </p>
+                
+              </div>
+            </Link>
+            <Link href={''}>
+              <p className='mt-2 font-normal '>{post.caption}</p>
+            </Link>
+         </div>
       </div>
     </div>
       

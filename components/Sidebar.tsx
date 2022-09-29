@@ -42,7 +42,6 @@ const Sidebar = () => {
           <SuggestedAccounts/>
           <Footer/>
         </div>
-        
       )}
     </div>
   )
