@@ -13,7 +13,7 @@ import { topics } from '../utils/constants';
 const Upload  = () => {
   const [caption, setCaption] = useState('');
   const [category, setCategory] = useState<String>(topics[0].name);
-  const [isLoading, setIsLoading] = useState<Boolean>(false);
+  const [Loading, setIsLoading] = useState<Boolean>(false);
   const [savingPost, setSavingPost] = useState<Boolean>(false);
   const [videoAsset, setVideoAsset] = useState<SanityAssetDocument | undefined>();
   const [wrongFileType, setWrongFileType] = useState(false);
@@ -26,6 +26,8 @@ const Upload  = () => {
     const fileTypes = ['video/mp4', 'video/webm', 'video/ogg','video/MOV'];
 
     if(fileTypes.includes(selectedFile.type)){
+      setIsLoading(true);
+      setWrongFileType(false);
       client.assets.upload('file',selectedFile,{
         contentType:selectedFile.type,
         filename: selectedFile.name
@@ -88,12 +90,12 @@ const Upload  = () => {
           </div>
           <div className='border-dashed rounded-xl border-4 border-gray-200 flex flex-col
           justify-center items-center outline-none mt-10 w-[260px] h-[460px] p-10 cursor-pointer hover:border-purple-300 hover:bg-gray-100'>
-            {isLoading ? (
+            {Loading ? (
               <p className='text-center text-3xl text-purple-400 font-semibold' >Uploading...</p>
             ):(
               <div>
                 {videoAsset ? (
-                  <div className=' rounded-3xl w-[300px] h-fit p-4 flex flex-col gap-6 justify-center items-center'>
+                  <div className=' rounded-3xl w-[300px]  p-4 flex flex-col gap-6 justify-center items-center'>
                     <video
                       src={videoAsset.url}
                       loop
