@@ -98,19 +98,18 @@ const Upload  = () => {
             <p className='text-md text-gray-400 mt-1'>Post a video to your account</p>
           </div>
           <div className='border-dashed rounded-xl border-4 border-gray-200 flex flex-col
-          justify-center items-center outline-none w-[260px] h-[460px] p-10 cursor-pointer hover:border-purple-300 hover:bg-gray-100'>
+          justify-center items-center outline-none mt-10 w-[260px] h-[460px] p-10 cursor-pointer hover:border-purple-300 hover:bg-gray-100'>
             {Loading ? (
               <p className='text-center text-3xl text-purple-400 font-semibold' >Uploading...</p>
             ):(
-              <div className='flex flex-col justify-center items-center'>
+              <div>
                 {videoAsset ? (
-                  <div className='min-w-fit max-h-fit'>
+                  <div className=' justify-center items-center w-[260px] h-[460px]'>
                     <video
                       src={videoAsset.url}
                       loop
                       controls
-                      className='rounded-xl  mt-16 bg-black flex flex-col
-                      justify-center items-center '
+                      className='rounded-xl  mt-16 bg-black'
                     >
                     </video>
                     
