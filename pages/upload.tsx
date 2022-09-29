@@ -109,16 +109,15 @@ const Upload  = () => {
                       src={videoAsset.url}
                       loop
                       controls
-                      className='rounded-xl h-[500px] mt-16 bg-black flex flex-col
-                      justify-center items-center'
+                      className='rounded-xl min-w-fit min-w-max max-w-max max-h-fit min-h-min mt-16 bg-black flex flex-col
+                      justify-center items-center '
                     >
-
                     </video>
                     
                   </div>
                 ):(
                   <label className='cursor-pointer'>
-                    <div className='flex flex-col items-center justify-center h-full'>
+                    <div className='flex flex-col items-center justify-center h-full '>
 
                       <div className='flex flex-col items-center justify-center'>
                         <p className='font-bold text-xl'>
