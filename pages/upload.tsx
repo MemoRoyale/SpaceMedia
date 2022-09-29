@@ -109,7 +109,7 @@ const Upload  = () => {
                       src={videoAsset.url}
                       loop
                       controls
-                      className='rounded-xl  mt-16 bg-black'
+                      className='rounded-xl  mt-16 bg-black w-[260px] h-[460px]'
                     >
                     </video>
                     
