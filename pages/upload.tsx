@@ -98,7 +98,7 @@ const Upload  = () => {
             <p className='text-md text-gray-400 mt-1'>Post a video to your account</p>
           </div>
           <div className='border-dashed rounded-xl border-4 border-gray-200 flex flex-col
-          justify-center items-center outline-none mt-10 w-[260px] h-[420px] p-11 cursor-pointer hover:border-purple-300 hover:bg-gray-100'>
+          justify-center items-center outline-none mt-10 w-[260px] h-[460px] p-10 cursor-pointer hover:border-purple-300 hover:bg-gray-100'>
             {Loading ? (
               <p className='text-center text-3xl text-purple-400 font-semibold' >Uploading...</p>
             ):(
@@ -111,8 +111,7 @@ const Upload  = () => {
                       controls
                       className='rounded-xl  mt-16 bg-black w-[260px] h-[460px]'
                     >
-                    </video>
-                    
+                    </video>                    
                   </div>
                 ):(
                   <label className='cursor-pointer'>
@@ -133,9 +132,7 @@ const Upload  = () => {
                         Less than 2GB
                       </p>
                       <p className='bg-[#800080] text-center mt-10 rounded text-white text-md font-medium p-2 w-52 outline-none'>
-                        Select file
-                        
-
+                        Select file                 
                       </p>
                     </div>
                     <input
@@ -143,7 +140,6 @@ const Upload  = () => {
                       name="upload-video"
                       onChange={uploadVideo}
                       className='w-0 h-0'
-                    
                     />
                   </label>
                 )}  
