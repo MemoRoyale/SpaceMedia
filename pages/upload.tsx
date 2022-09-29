@@ -26,6 +26,7 @@ const Upload  = () => {
     const fileTypes = ['video/mp4', 'video/webm', 'video/ogg','video/MOV','video/quicktime','audio/ogg'];
     console.log(selectedFile.type);
     console.log(fileTypes);
+
     if(fileTypes.includes(selectedFile.type)){
       setIsLoading(true);
       setWrongFileType(false);
@@ -101,14 +102,15 @@ const Upload  = () => {
             {Loading ? (
               <p className='text-center text-3xl text-purple-400 font-semibold' >Uploading...</p>
             ):(
-              <div>
+              <div className='flex flex-col justify-center items-center'>
                 {videoAsset ? (
                   <div>
                     <video
                       src={videoAsset.url}
                       loop
                       controls
-                      className='rounded-xl h-[450px] mt-16 bg-black'
+                      className='rounded-xl h-[600px] mt-16 bg-black flex flex-col
+                      justify-center items-center'
                     >
 
                     </video>
