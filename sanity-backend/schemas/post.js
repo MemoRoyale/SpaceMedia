@@ -17,7 +17,7 @@ export default {
       },
     },
     {
-      title: 'Launch Scheduled At',
+      title: 'PostedAt',
       name: 'launchAt',
       type: 'datetime',
       options: {

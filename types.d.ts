@@ -6,6 +6,7 @@ export interface Video {
         url: string;
       };
     };
+    launchAt: string;
     _id: string;
     postedBy: {
       _id: string;
