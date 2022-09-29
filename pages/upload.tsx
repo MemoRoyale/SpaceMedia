@@ -29,6 +29,7 @@ const Upload  = () => {
       client.assets.upload('file',selectedFile,{
         contentType:selectedFile.type,
         filename: selectedFile.name
+        
       }).then((data)=> {
         setVideoAsset(data);
         setIsLoading(false);
@@ -92,7 +93,7 @@ const Upload  = () => {
             ):(
               <div>
                 {videoAsset ? (
-                  <div className=' rounded-3xl w-[300px]  p-4 flex flex-col gap-6 justify-center items-center'>
+                  <div className=' rounded-3xl w-[300px] h-[300px] p-4 flex flex-col gap-6 justify-center items-center'>
                     <video
                       src={videoAsset.url}
                       loop
@@ -136,7 +137,7 @@ const Upload  = () => {
                     
                     />
                   </label>
-                )}
+                )}  
               </div>
             )}
             {wrongFileType && (
