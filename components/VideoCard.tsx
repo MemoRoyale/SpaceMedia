@@ -32,7 +32,7 @@ const VideoCard: NextPage<IProps> = ({post}) => {
       setPlaying(true);
     }
   };
-
+  
   useEffect(() => {
     if (post && videoRef?.current) {
       videoRef.current.muted = isVideoMuted;
@@ -97,7 +97,6 @@ const VideoCard: NextPage<IProps> = ({post}) => {
               className='lg:w-[600px] h-[300px] md:h-[400px] lg:h-[528px] w-[200px] rounded-2xl cursor-pointer bg-gray-100'
               ></video>
             </Link>
-            <p>{post.launchAt}</p>
 
 
           {isHover && (

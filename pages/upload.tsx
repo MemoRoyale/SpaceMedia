@@ -64,7 +64,7 @@ const Upload  = () => {
             _ref: videoAsset?._id
           }
         },
-        launchAt:now,
+        launchAt:now.toLocaleString(),
         userId: userProfile?._id,
         postedBy:{
           _type:'postedBy',
