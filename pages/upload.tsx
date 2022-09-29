@@ -104,12 +104,12 @@ const Upload  = () => {
             ):(
               <div className='flex flex-col justify-center items-center'>
                 {videoAsset ? (
-                  <div>
+                  <div className='min-w-fit min-w-max max-w-max max-h-fit min-h-min'>
                     <video
                       src={videoAsset.url}
                       loop
                       controls
-                      className='rounded-xl min-w-fit min-w-max max-w-max max-h-fit min-h-min mt-16 bg-black flex flex-col
+                      className='rounded-xl  mt-16 bg-black flex flex-col
                       justify-center items-center '
                     >
                     </video>
