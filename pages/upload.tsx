@@ -102,7 +102,7 @@ const Upload  = () => {
             ):(
               <div>
                 {videoAsset ? (
-                  <div className='rounded-3xl w-[500px] h-[700px]  p-4 flex flex-col gap-6 justify-center items-center'>
+                  <div>
                     <video
                       src={videoAsset.url}
                       loop
