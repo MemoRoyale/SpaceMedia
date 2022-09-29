@@ -155,7 +155,6 @@ const Detail = ({postDetails}:IProps) => {
                 </div>
                 
                 <p className='px-10 text-lg text-gray-600'>{post.caption}</p>
-                <p className='px-5 text-xs text-gray-300'>{post.launchAt}</p>
                 <div className='mt-10 px-10'>
                 {userProfile && <LikeButton
                   likes={post.likes}
@@ -164,6 +163,7 @@ const Detail = ({postDetails}:IProps) => {
                   handleDislike={() => handleLike(false)}
                 />}                                                                             
                 </div>
+                <p className='px-5 text-xs text-gray-300'>{post.launchAt}</p>
                 <Comments
                 comment={comment}
                 setComment={setComment}
