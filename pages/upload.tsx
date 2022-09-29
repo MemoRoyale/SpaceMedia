@@ -49,6 +49,7 @@ const Upload  = () => {
   const handlePost = async () => {
     if(caption && videoAsset?._id &&  category){
       setSavingPost(true);
+      const now = new Date();
 
       const document ={
         _type: 'post',
@@ -60,6 +61,7 @@ const Upload  = () => {
             _ref: videoAsset?._id
           }
         },
+        launchAt:now,
         userId: userProfile?._id,
         postedBy:{
           _type:'postedBy',
@@ -95,7 +97,7 @@ const Upload  = () => {
                       src={videoAsset.url}
                       loop
                       controls
-                      className='rounded-xl h-[450px] mt-16 bg-black'
+                      className='rounded-xl h-[462px] mt-16 bg-black'
 
                     >
 
