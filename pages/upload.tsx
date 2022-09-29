@@ -72,14 +72,21 @@ const Upload  = () => {
         },
         topic: category
       }
-
+      
       await axios.post(`${BASE_URL}/api/post`,document);
       
       router.push('/');
 
 
     }
+    
   }
+  const handleDiscard = () => {
+    setSavingPost(false);
+    setVideoAsset(undefined);
+    setCaption('');
+    setCategory('');
+  };
   return (
     <div className='flex w-full h-full absolute left-0 top-[60px] mb-10 pt-10 lg:pt-20 bg-[#F8F8F8] justify-center'>
       <div className='bg-white rounded-lg xl:h-[80vh] flex gap-6 flex-wrap justify-center items-center p-14 pt-6'>
@@ -93,9 +100,9 @@ const Upload  = () => {
             {Loading ? (
               <p className='text-center text-3xl text-purple-400 font-semibold' >Uploading...</p>
             ):(
-              <div>
+              <div >
                 {videoAsset ? (
-                  <div className=''>
+                  <div className='rounded-3xl w-[300px] w-[600px]  p-4 flex flex-col gap-6 justify-center items-center'>
                     <video
                       src={videoAsset.url}
                       loop
@@ -179,7 +186,7 @@ const Upload  = () => {
           </select>
           <div className='flex gap-6 mt-10'>
             <button
-            onClick={()=>{}}
+            onClick={handleDiscard}
             type='button'
             className='border-gray-300 border-2 text-md font-medium p-2 rounded w-28 lg:w-44 outline-none'> Discard
 
