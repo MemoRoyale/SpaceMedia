@@ -20,19 +20,25 @@ const Upload  = () => {
 
   const userProfile: any = useAuthStore((state) => state.userProfile);
   const router = useRouter();
+
   
   const uploadVideo = async (e: any) => {
     const selectedFile = e.target.files[0];
-    const fileTypes = ['video/mp4', 'video/webm', 'video/ogg','video/MOV','video/quicktime','audio/ogg'];
+    const fileTypes = ['video/mp4', 'video/webm', 'video/ogg','video/MOV','video/quicktime','audio/ogg','image/jpeg','image/png','image/WebP'];
+    const images= ['image/jpeg','image/png','image/WebP'];
     console.log(selectedFile.type);
     console.log(fileTypes);
 
     if(fileTypes.includes(selectedFile.type)){
+
       setIsLoading(true);
       setWrongFileType(false);
+      
+    
       client.assets.upload('file',selectedFile,{
         contentType:selectedFile.type,
         filename: selectedFile.name
+        
         
       }).then((data)=> {
         setVideoAsset(data);
@@ -43,7 +49,9 @@ const Upload  = () => {
       setIsLoading(false);
       setWrongFileType(true);
     }
+    
   }
+  
 
 
   useEffect(() => {
@@ -52,10 +60,13 @@ const Upload  = () => {
 
 
   const handlePost = async () => {
+    
+    
     if(caption && videoAsset?._id &&  category){
       setSavingPost(true);
       const now = new Date();
-
+      console.log(videoAsset._type);
+      
       const document ={
         _type: 'post',
         caption,
@@ -67,6 +78,7 @@ const Upload  = () => {
           }
         },
         launchAt:now.toLocaleString(),
+        TypeID:'videoAsset._type',
         userId: userProfile?._id,
         postedBy:{
           _type:'postedBy',
