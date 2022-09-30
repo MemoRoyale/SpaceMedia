@@ -5,8 +5,7 @@ import VideoCard from '../components/VideoCard';
 import NoResults from '../components/NoResults';
 
 interface IProps {
-  videos: Video[]
-
+  videos: Video[] 
 }
 
 const Home = ({videos}:IProps) => {
@@ -16,7 +15,6 @@ const Home = ({videos}:IProps) => {
       {videos.length ?(
         videos.map((video:Video)=>(
           //*for later: edit to add "if" for image funtion-
-        
           <VideoCard post={video} key={video._id}/>
         ))
       ):(
