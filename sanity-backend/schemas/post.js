@@ -19,13 +19,8 @@ export default {
     {
       title: 'PostedAt',
       name: 'launchAt',
-      type: 'datetime',
-      options: {
-        dateFormat: 'YYYY-MM-DD',
-        timeFormat: 'HH:mm',
-        timeStep: 15,
-        calendarTodayLabel: 'Today'
-      }
+      type: 'string',
+      
     },
     {
       name: 'TypeID',
