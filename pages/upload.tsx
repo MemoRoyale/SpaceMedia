@@ -65,7 +65,7 @@ const Upload  = () => {
     if(caption && videoAsset?._id &&  category){
       setSavingPost(true);
       const now = new Date();
-      console.log(videoAsset._type);
+      console.log(videoAsset._type,videoAsset._type,videoAsset);
       
       const document ={
         _type: 'post',
@@ -78,7 +78,7 @@ const Upload  = () => {
           }
         },
         launchAt:now.toLocaleString(),
-        TypeID:'videoAsset._type',
+        TypeID:'video',
         userId: userProfile?._id,
         postedBy:{
           _type:'postedBy',
