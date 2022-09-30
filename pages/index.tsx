@@ -5,13 +5,12 @@ import VideoCard from '../components/VideoCard';
 import NoResults from '../components/NoResults';
 
 interface IProps {
-  TypeID:Video
   videos: Video[]
 
 }
 
-const Home = ({videos,TypeID}:IProps) => {
-  console.log(videos,TypeID);
+const Home = ({videos}:IProps) => {
+  console.log(videos);
   return (
     <div className='flex flex-col gap-10 videos h-full'>
       {videos.length ?(
