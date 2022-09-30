@@ -7,6 +7,7 @@ export interface Video {
       };
     };
     launchAt: string;
+    TypeID:string;
     _id: string;
     postedBy: {
       _id: string;

@@ -5,16 +5,19 @@ import VideoCard from '../components/VideoCard';
 import NoResults from '../components/NoResults';
 
 interface IProps {
-  videos: Video[] 
+  TypeID:Video
+  videos: Video[]
+
 }
 
-const Home = ({videos}:IProps) => {
-  console.log(videos);
+const Home = ({videos,TypeID}:IProps) => {
+  console.log(videos,TypeID);
   return (
     <div className='flex flex-col gap-10 videos h-full'>
       {videos.length ?(
         videos.map((video:Video)=>(
           //*for later: edit to add "if" for image funtion-
+        
           <VideoCard post={video} key={video._id}/>
         ))
       ):(

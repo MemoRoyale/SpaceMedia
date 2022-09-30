@@ -28,6 +28,11 @@ export default {
       }
     },
     {
+      name: 'TypeID',
+      title: 'PostType',
+      type: 'string',
+    },
+    {
       name: 'userId',
       title: 'UserId',
       type: 'string',

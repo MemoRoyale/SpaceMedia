@@ -9,6 +9,7 @@ export const allPostsQuery = () => {
         }
       },
       launchAt,
+      TypeID,
       userId,
       postedBy->{
         _id,
@@ -41,6 +42,7 @@ export const postDetailQuery = (postId: string | string[]) => {
         }
       },
       launchAt,
+      TypeID,
       userId,
     postedBy->{
       _id,
@@ -71,6 +73,7 @@ export const searchPostsQuery = (searchTerm: string | string[]) => {
         }
       },
       launchAt,
+      TypeID,
       userId,
     postedBy->{
       _id,
@@ -114,6 +117,7 @@ export const userCreatedPostsQuery = (userId: string | string[]) => {
         }
       },
       launchAt,
+      TypeID,
       userId,
     postedBy->{
       _id,
@@ -147,6 +151,7 @@ export const userLikedPostsQuery = (userId: string | string[]) => {
         }
       },
       launchAt,
+      TypeID,
       userId,
     postedBy->{
       _id,
@@ -180,6 +185,7 @@ export const topicPostsQuery = (topic: string | string[]) => {
         }
       },
       launchAt,
+      TypeID,
       userId,
     postedBy->{
       _id,
