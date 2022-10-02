@@ -59,13 +59,13 @@ const Upload  = () => {
   }, [userProfile, router]);
 
 
-  const handlePost = async () => {
+  const handlePost = async (e: any) => {
     
-    
+    const selectedFile = e.target.files[0];
     if(caption && videoAsset?._id &&  category){
       setSavingPost(true);
       const now = new Date();
-      console.log(videoAsset._type,videoAsset._type,videoAsset);
+      console.log(videoAsset.mimeType);
       
       const document ={
         _type: 'post',
@@ -78,7 +78,7 @@ const Upload  = () => {
           }
         },
         launchAt:now.toLocaleString(),
-        TypeID:'video',
+        TypeID:videoAsset.mimeType,
         userId: userProfile?._id,
         postedBy:{
           _type:'postedBy',
