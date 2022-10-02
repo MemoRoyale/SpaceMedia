@@ -27,8 +27,8 @@ const Upload  = () => {
     const selectedFile = e.target.files[0];
     const fileTypes = ['video/mp4', 'video/webm', 'video/ogg','video/MOV','video/quicktime','audio/ogg'];
    // const images= ['image/jpeg','image/png','image/WebP'];
-   // console.log(selectedFile.type);
-   // console.log(fileTypes);
+    console.log(selectedFile.type);
+    console.log(fileTypes);
 
     if(fileTypes.includes(selectedFile.type)){
 
@@ -60,9 +60,9 @@ const Upload  = () => {
   }, [userProfile, router]);
 
 
-  const handlePost = async (e: any) => {
+  const handlePost = async () => {
     
-    const selectedFile = e.target.files[0];
+    
     if(caption && videoAsset?._id &&  category){
       setSavingPost(true);
       const now = new Date();
