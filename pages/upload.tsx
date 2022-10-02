@@ -16,6 +16,7 @@ const Upload  = () => {
   const [Loading, setIsLoading] = useState<Boolean>(false);
   const [savingPost, setSavingPost] = useState<Boolean>(false);
   const [videoAsset, setVideoAsset] = useState<SanityAssetDocument | undefined>();
+  const [imageAsset, setimageAsset] = useState<SanityAssetDocument | undefined>();
   const [wrongFileType, setWrongFileType] = useState(false);
 
   const userProfile: any = useAuthStore((state) => state.userProfile);
@@ -24,8 +25,8 @@ const Upload  = () => {
   
   const uploadVideo = async (e: any) => {
     const selectedFile = e.target.files[0];
-    const fileTypes = ['video/mp4', 'video/webm', 'video/ogg','video/MOV','video/quicktime','audio/ogg','image/jpeg','image/png','image/WebP'];
-    const images= ['image/jpeg','image/png','image/WebP'];
+    const fileTypes = ['video/mp4', 'video/webm', 'video/ogg','video/MOV','video/quicktime','audio/ogg'];
+   // const images= ['image/jpeg','image/png','image/WebP'];
     console.log(selectedFile.type);
     console.log(fileTypes);
 
