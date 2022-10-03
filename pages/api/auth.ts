@@ -10,10 +10,10 @@ export default async function handler( req: NextApiRequest,
     
     client.createIfNotExists(user)
     .then(() => res.status(200).json('Login successful'))
-    
-    client.patch(user._id)
-    .set({userName: user._username})
-    .set({image: user.image})
-    .commit();
+
+   // client.patch(user._id)
+  //  .set({userName: user._username})
+  //  .set({image: user.image})
+   // .commit();
   }
 }
