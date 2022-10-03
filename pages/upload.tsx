@@ -25,7 +25,7 @@ const Upload  = () => {
   
   const uploadVideo = async (e: any) => {
     const selectedFile = e.target.files[0];
-    const fileTypes = ['video/mp4', 'video/webm', 'video/ogg','video/MOV','video/quicktime','audio/ogg','image/jpeg','image/png','image/WebP'];
+    const fileTypes = ['video/mp4', 'video/webm', 'video/ogg','video/MOV','video/quicktime','audio/ogg'];
    // const images= ['image/jpeg','image/png','image/WebP'];
     console.log(selectedFile.type);
     console.log(fileTypes);
