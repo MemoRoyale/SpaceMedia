@@ -124,7 +124,23 @@ const VideoCard: NextPage<IProps> = ({post}) => {
             </div>
           )}
         </div>
-        : null}   
+        : null}
+        {post.TypeID.includes('image')? 
+        <div
+        className='rounded-3xl'
+        >
+          <div className='lg:w-[600px] h-[300px] md:h-[400px] lg:h-[528px] w-[200px] rounded-2xl cursor-pointer bg-gray-100'>
+            <Link href={`/detail/${post._id}`}>
+              <Image 
+              className='cursor-pointer'
+              alt='profile-photo'
+              layout='responsive'
+              src={post.video.asset.url}
+              ></Image>
+            </Link>
+          </div>
+        </div>
+        : null}
 
       </div>
     </div>
