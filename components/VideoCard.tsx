@@ -33,6 +33,7 @@ const VideoCard: NextPage<IProps> = ({post}) => {
     }
   };
   
+  console.log(post.video.asset.url)
   useEffect(() => {
     if (post && videoRef?.current) {
       videoRef.current.muted = isVideoMuted;
@@ -135,6 +136,8 @@ const VideoCard: NextPage<IProps> = ({post}) => {
               className='cursor-pointer'
               alt='profile-photo'
               layout='responsive'
+              width={600} 
+              height={300}
               src={post.video.asset.url}
               ></Image>
             </Link>
