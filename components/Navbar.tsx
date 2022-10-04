@@ -40,12 +40,15 @@ const Navbar = () => {
         <Link href={`/profile/${userProfile?._id}`}>
         <div className='w-[180px] md:w-[160px] md:h-[30px] h-[40px]'>
         <>
+        <p>
+
           <Image
             className='cursor-pointer'
             src={Logo}
             alt='logo'
             layout='responsive'
           />
+          </p>
         </>
         </div>
       </Link>
