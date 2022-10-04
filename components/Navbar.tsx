@@ -36,9 +36,15 @@ const Navbar = () => {
 
   return (
     <div className='w-full flex justify-between item-center border-b-2 border-gray-200 py-2 px-4'>
+
       {userProfile?
         <Link href={`/profile/${userProfile?._id}`}>
-        <div className='w-[180px] md:w-[160px] md:h-[30px] h-[40px]'>
+          <p>Osama</p>
+      </Link>
+      
+
+        :null}
+      <div className='w-[180px] md:w-[160px] md:h-[30px] h-[40px]'>
           <Image
             className='cursor-pointer'
             src={Logo}
@@ -46,9 +52,7 @@ const Navbar = () => {
             layout='responsive'
           />
         </div>
-      </Link>
 
-:null}
          
 
 
