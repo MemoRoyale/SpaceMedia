@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -22,6 +22,8 @@ const VideoCard: NextPage<IProps> = ({post}) => {
   const [isHover, setIsHover] = useState(false);
   const [isVideoMuted, setIsVideoMuted] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [observer, setObserver] = useState<IntersectionObserver | null>(null);
+  const [debugText, setDebugText] = useState<string>("");
 
   const onVideoPress = () => {
     if (playing) {
@@ -33,12 +35,68 @@ const VideoCard: NextPage<IProps> = ({post}) => {
     }
   };
   
+  
   console.log(post.video.asset.url)
   useEffect(() => {
     if (post && videoRef?.current) {
       videoRef.current.muted = isVideoMuted;
     }
   }, [post, isVideoMuted]);
+
+  const handleViewChange = useCallback(
+    (entries: IntersectionObserverEntry[]) => {
+      for (let entry of entries) {
+        if (entry.intersectionRatio > 0.5) {
+          if (videoRef.current) {
+            // Note: if the user has not interacted with the page, videos that is not muted will not be allowed to play
+            // and will throw out an error. Won't crash the app though.
+
+            // Note2: if you want to pause all other videos, the following line would do so.
+            document.querySelectorAll("video").forEach((video) => {
+              video.pause();
+            });
+
+            // * this is not the best practice if there are some video elements that should not be affected.
+            // * Modify the query to select only the videos that you want to pause.
+
+            videoRef.current.play();
+            setDebugText(
+              `intersectionRatio: ${entry.intersectionRatio.toFixed(
+                2
+              )}, now play.`
+            );
+          }
+        } else {
+          if (videoRef.current) {
+            videoRef.current.pause();
+            setDebugText(
+              `intersectionRatio: ${entry.intersectionRatio.toFixed(
+                2
+              )}, now pause.`
+            );
+          }
+        }
+      }
+    },
+    []
+  );
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleViewChange, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5
+    });
+    setObserver(observer);
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+    return () => {
+      if (observer) {
+        observer.disconnect();
+      }
+    };
+  }, [handleViewChange]);
   
 
    
