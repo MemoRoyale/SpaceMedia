@@ -21,8 +21,6 @@ const Navbar = () => {
   const [searchValue, setSearchValue] = useState('');
   const router = useRouter();
 
-  console.log(userProfile?._id)
-
   
 
 
@@ -39,17 +37,18 @@ const Navbar = () => {
   return (
     <div className='w-full flex justify-between item-center border-b-2 border-gray-200 py-2 px-4'>
       {userProfile?
-        <Link href={`/profile/${userProfile?._id}` } key={userProfile._id}>
+        <Link href='/'>
         <div className='w-[180px] md:w-[160px] md:h-[30px] h-[40px]'>
-          <div className='w-8 h-8'>
-            <Image
-              className='rounded-full cursor-pointer'
-              src={Logo}
-              alt='user profile'
-              layout='responsive'
-            />
-          </div>
-        
+        <>
+        <p>
+          <Image
+            className='cursor-pointer'
+            src={Logo}
+            alt='logo'
+            layout='responsive'
+          />
+          </p>
+        </>
         </div>
       </Link>
 
@@ -91,7 +90,7 @@ const Navbar = () => {
               </button>
             </Link> 
             {userProfile.image && (
-              <Link href='/'>
+              <Link href={`/profile/${userProfile?._id}`} >
                 <>
                 <Image 
                   width={40} 
