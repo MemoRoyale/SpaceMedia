@@ -41,16 +41,15 @@ const Navbar = () => {
       {userProfile?
         <Link href={`/profile/${userProfile?._id}` } key={userProfile._id}>
         <div className='w-[180px] md:w-[160px] md:h-[30px] h-[40px]'>
-        <>
-        <p>
-          <Image
-            className='cursor-pointer'
-            src={Logo}
-            alt='logo'
-            layout='responsive'
-          />
-          </p>
-        </>
+          <div className='w-8 h-8'>
+            <Image
+              className='rounded-full cursor-pointer'
+              src={Logo}
+              alt='user profile'
+              layout='responsive'
+            />
+          </div>
+        
         </div>
       </Link>
 
