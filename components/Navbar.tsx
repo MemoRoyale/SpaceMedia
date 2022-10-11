@@ -21,6 +21,8 @@ const Navbar = () => {
   const [searchValue, setSearchValue] = useState('');
   const router = useRouter();
 
+  console.log(userProfile?._id)
+
   
 
 
@@ -41,7 +43,6 @@ const Navbar = () => {
         <div className='w-[180px] md:w-[160px] md:h-[30px] h-[40px]'>
         <>
         <p>
-
           <Image
             className='cursor-pointer'
             src={Logo}
