@@ -30,6 +30,9 @@ const VideoCard: NextPage<IProps> = ({post}) => {
       videoRef?.current?.pause();
       setPlaying(false);
     } else {
+      document.querySelectorAll("video").forEach((video) => {
+        video.pause();
+      });
       videoRef?.current?.play();
       setPlaying(true);
     }
@@ -40,21 +43,11 @@ const VideoCard: NextPage<IProps> = ({post}) => {
   useEffect(() => {
     if (post && videoRef?.current) {
       videoRef.current.muted = isVideoMuted;
-      document.querySelectorAll("video").forEach((video) => {
-        video.pause();
-        setPlaying(false);
-        
-      });
+      
     }
   }, [post, isVideoMuted]);
 
  
-
-  
-  
-
-   
-
   return (
     <div className='flex flex-col border-b-2 border-gray-200 pb-6'>
       <div> 
