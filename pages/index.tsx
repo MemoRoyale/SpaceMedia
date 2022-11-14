@@ -14,7 +14,7 @@ const Home = ({videos}:IProps) => {
     <div className='flex flex-col gap-10 videos h-full'>
       {videos.length ?(
         videos.map((video:Video)=>(
-          //*for later: edit to add "if" for image funtion-
+          
           <VideoCard post={video} key={video._id}/>
         ))
       ):(
