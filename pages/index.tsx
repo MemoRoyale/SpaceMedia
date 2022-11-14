@@ -10,9 +10,7 @@ interface IProps {
 
 const Home = ({videos}:IProps) => {
   console.log(videos);
-  
   return (
-    
     
     <div className='flex flex-col gap-10 videos h-full'>
       {videos.length ?(
@@ -27,15 +25,7 @@ const Home = ({videos}:IProps) => {
     </div>
   )
 }
-function registerServiceWorker(): void {
-  if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.jsx')
-          .then((registration) =>
-              console.log(`Service Worker registration complete, scope: '${registration.scope}'`))
-          .catch((error) =>
-              console.log(`Service Worker registration failed with error: '${error}'`));
-  }
-}
+
 
 export const getServerSideProps = async ({
   query: { topic },
@@ -52,6 +42,6 @@ export const getServerSideProps = async ({
     props: { videos: response.data },
   };
 };
-registerServiceWorker();
+
 export default Home
 
