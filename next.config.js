@@ -9,6 +9,9 @@ const nextConfig = withPWA({
     ignoreBuildErrors: true,
 
   },
+  fallback: false,
+
+
   reactStrictMode: true,
   
   images:{
