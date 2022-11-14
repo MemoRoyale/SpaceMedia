@@ -1,13 +1,11 @@
 /** @type {import('next').NextConfig} */
-
-const nextConfig = {
+const withPWA = require('next-pwa');  
+const nextConfig = withPWA({
+  
   typescript:{
     ignoreBuildErrors: true,
 
   },
-
-  
-   
   
   reactStrictMode: true,
   swcMinify: true,
@@ -17,6 +15,6 @@ const nextConfig = {
       'lh3.googleusercontent.com'
     ],
   }
-}
+});
 
 module.exports = nextConfig
