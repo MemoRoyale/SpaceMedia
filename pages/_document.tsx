@@ -1,19 +1,25 @@
-import Document,{Html,Head,Main,NextScript} from "next/document";
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 
-class MyDocument extends Document{
-    render(){
-        return(
-            <Html>
-                <Head>
-                    <link rel="manifest" href="/manifest.json" />
-                    <link rel="apple-touch-icon" href="/icon.png"/>
-                    <meta name="theme-color" content="#000000" />
-                </Head>
-                <body>
-                    <Main/>
-                    <NextScript/>
-                </body>
-            </Html>
-        );
-    }
+
+export default class _Document extends Document {
+
+  render() {
+    return (
+      <Html>
+        <Head>
+          <title>PWA</title>
+          <link
+            rel="shortcut icon"
+            href="alarm-clock.png"
+            type="image/x-icon"
+          />
+          <link rel="manifest" href="/manifest.json" />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
