@@ -7,13 +7,14 @@ export default class _Document extends Document {
     return (
       <Html>
         <Head>
-          <title>PWA</title>
+          
           <link
             rel="shortcut icon"
             href="alarm-clock.png"
             type="image/x-icon"
           />
           <link rel="manifest" href="/manifest.json" />
+          <meta name="theme-color" content='#fff'/>
         </Head>
         <body>
           <Main />
