@@ -10,7 +10,7 @@ export default class _Document extends Document {
           
           <link
             rel="shortcut icon"
-            href="alarm-clock.png"
+            href="apple-touch-icon.png"
             type="image/x-icon"
           />
           <link rel="manifest" href="/manifest.json" />
