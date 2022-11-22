@@ -14,7 +14,7 @@ export default class _Document extends Document {
             type="image/x-icon"
           />
           <link rel="manifest" href="/manifest.json" />
-          <meta name="theme-color" content='#fff'/>
+          <meta name="theme-color" content='#ffffff'/>
         </Head>
         <body>
           <Main />
