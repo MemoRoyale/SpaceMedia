@@ -38,7 +38,6 @@ const VideoCard: NextPage<IProps> = ({post}) => {
     }
   };
   
-  
   console.log(post.video.asset.url)
   useEffect(() => {
     if (post && videoRef?.current) {
