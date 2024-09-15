@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 
 
-Open [https://space-media-finalproject.vercel.app](https://space-media-finalproject.vercel.app) with your browser to view this applicaation.
+Open [https://space-media-finalproject.vercel.app](https://space-media-finalproject.vercel.app) with your browser to view this application.
 
 
 
