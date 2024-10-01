@@ -1,5 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#  Space Media Dashboard
+Click on this [link](https://space-media-finalproject.vercel.app) to view hosted project
 
+## Technology Stack
+
+- **Frontend**: Next.js, Tailwind CSS, Material UI Data Grid
+- **Backend**: Node.js with Express
+- **Database**: Sanity.
+- **Cloud**: Varcel
 ## Getting Started
 
 
