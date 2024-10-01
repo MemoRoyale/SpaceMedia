@@ -3,10 +3,10 @@ Click on this [link](https://space-media-finalproject.vercel.app) to view hosted
 
 ## Technology Stack
 
-- **Frontend**: Next.js, Tailwind CSS, Material UI Data Grid
-- **Backend**: Node.js with Express
+- **Frontend**: Next.js, TypeScript, Tailwind CSS.
+- **Backend**: Node.js with Express.
 - **Database**: Sanity.
-- **Cloud**: Varcel
+- **Cloud**: Varcel, Google Auth, Sanity.io
 ## Getting Started
 
 
